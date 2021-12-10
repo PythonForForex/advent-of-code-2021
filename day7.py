@@ -22,3 +22,13 @@ allign_to = [
 
 print(min(allign_to))
 
+
+## For reference - optimized for speed
+
+allign_to = [
+    sum([abs(potential_pos - start_pos) * (abs(potential_pos - start_pos) + 1) / 2 for start_pos in input])
+    for potential_pos in range(min(input), max(input) + 1)
+]
+
+print(min(allign_to))
+
