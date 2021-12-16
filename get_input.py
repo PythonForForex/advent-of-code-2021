@@ -21,7 +21,7 @@ def get_input(day=1):
 		r = requests.get(f'https://adventofcode.com/2021/day/{day}/input', cookies=cookie_jar)
 		r.raise_for_status()
 
-		with open(f'day{day}.txt', 'w') as e:
+		with open(f'inputs/day{day}.txt', 'w') as e:
 			e.write(r.text)
 
 		return r.text
