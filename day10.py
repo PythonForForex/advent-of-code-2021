@@ -7,7 +7,7 @@ raw_input = raw_input.splitlines()
 open_symbols = ['(', '[', '{', '<']
 closing_symbols = [')', ']', '}', '>']
 
-syntax_errorrs = []
+syntax_errors = []
 for line in raw_input:
 
 	for _ in range(len(line)**2):
@@ -20,7 +20,7 @@ for line in raw_input:
 		
 	for symbol in line:
 		if symbol in closing_symbols:
-			syntax_errorrs.append(symbol)
+			syntax_errors.append(symbol)
 			break
 
 
@@ -31,5 +31,5 @@ point_system = {
     '>': 25137,
 	}
 
-score = [point_system.get(points) for points in syntax_errorrs]
+score = [point_system.get(points) for points in syntax_errors]
 print(sum(score))
