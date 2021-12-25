@@ -14,7 +14,6 @@ for line in raw_input:
 		for open_string, close_string in zip(open_symbols, closing_symbols):
 			if open_string+close_string in line:
 				line = line.replace(open_string+close_string, '')
-				changes = True
 				break
 		else:
 			break
@@ -31,7 +30,6 @@ point_system = {
     '}': 1197,
     '>': 25137,
 	}
-
 
 score = [point_system.get(points) for points in syntax_errorrs]
 print(sum(score))
