@@ -24,7 +24,7 @@ for line in raw_input:
 			syntax_errors.append(symbol)
 			break
 	else:
-		incomplete_lines.append(line)
+		incomplete_lines.append(line)	
 
 
 point_system = {
